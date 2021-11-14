@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Php Tutorial 1</title>
+</head>
+<body>
+<?php
+
+// ***************Practice Sestion ************
+// this is comment 
+/*
+This is 
+Multiline Comment 
+*/
+
+// echo "Hello World  <br>";
+
+// // 1. Variable
+// $a = 123;
+// $b = 44;
+// $x = true; // boolan datatype
+// $c = false;
+// $g = 44.55 ;  // float
+// echo $a +$b ;
+// echo "<br>";
+
+// // Data Types 
+// // 1. String 
+
+// $str1 = "this is string <br>";
+
+// echo $str1;
+// var_dump($g);
+
+// echo "<br>";
+
+
+
+// //  2. Arrays
+// $fruits = array ('apple', 'orrange','grapes');
+// var_dump($fruits);
+
+
+
+// // 3. String Functions
+// $str1 = "My name is Shyam";
+//  echo strlen ($str1),"<br>";
+//  echo str_word_count($str1),"<br>";  // String Word Count
+//  echo strrev ($str1),"<br>";    //Reverse string
+// echo strpos($str1,'name'),"<br>";
+
+
+
+   // ********** Gurukul Section **************
+// Simpile Function
+function greet($a = "sir !"){
+    echo "<br> Good Morning $a !";
+}
+
+greet("Harish");
+greet("Shyam");
+greet("");   // Function With Default Argument
+
+// function with Default argument 
+
+function add ($a,$b){
+    $c = $a +$b ;
+    echo "<br> addition is $c";
+}
+add(4,5);
+
+
+// function with Default argument and return Type
+
+function add2 ($a,$b){
+    $c = $a +$b ;
+    return $c;
+}
+$res1 = add2(4,5);
+ $res2 =add2(8,5);
+if($res1>$res1){
+echo "<br> res 1 is greater than res2";
+}
+else
+{
+echo "<br> res 2 is greater than res1";
+
+}
+
+// Addition  function 
+
+function add1 ($a,$b){
+    $c = $a +$b ;
+    echo "<br> addition is $c";
+}
+add(4,5);
+
+// Subtraction  function 
+
+function sub ($a,$b){
+    $c = $a - $b ;
+    echo "<br> Subtraction is $c";
+}
+sub(4,5);
+
+// Subtraction  function 
+
+function mul ($a,$b){
+    $c = $a * $b ;
+    echo "<br> Multification is $c";
+}
+mul(4,5);
+
+// div  function 
+
+function div ($a,$b){
+    $c = $a / $b ;
+    echo "<br> Division is $c";
+}
+div(4,2);
+
+// find Area of circle
+
+function area ($a){
+    $c = 3.14 *$a *$a ;
+    echo "<br> Area of circle 1 is $c";
+    return $c ;
+
+}
+$res1 = area (3);
+$res2 = area (6);
+
+if ($res1>$res2){
+      echo "<br> Circle 1 is Grater than  Circle 2";
+}else{
+      echo "<br> Circle 2 is Grater than  Circle 1";
+
+}
+
+
+
+
+?>
+
+</body>
+</html>
+*******************************************
+Q3. How to Submit user data
+1. index.php:
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Php Tutorial 1</title>
+</head>
+<body>
+    
+    <form method="get" action="getdata.php">
+        <p>UserName: <input type="text" name="username"></p>
+        <input type="Submit" value="Register">
+    </form>
+
+
+</body>
+</html>
+
+2. getdata.php
+<?php 
+
+$a = $_GET['username'];
+echo "Welcome $a";
+?>
